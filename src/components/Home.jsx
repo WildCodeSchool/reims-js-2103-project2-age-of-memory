@@ -12,6 +12,7 @@ function Home() {
           <button type="button">Valider</button>
         </label>
         <button type="button">Play</button>
+        <button type="button">Difficulté</button>
       </div>
     </>
   );
