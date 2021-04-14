@@ -1,6 +1,6 @@
 import React from 'react';
-import Regle from './components/Regle';
-import logo from './components/assets/logo.png';
+import Regle from './Regle';
+import logo from './assets/logo.png';
 
 function Header() {
   return (
