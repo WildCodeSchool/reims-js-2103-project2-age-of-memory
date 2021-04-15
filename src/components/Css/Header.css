@@ -1,0 +1,29 @@
+.header{
+    max-height: 500px;
+}
+
+.Baniere{
+    height: 90vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.logo{
+    transform: translateY(-90vh);
+    z-index: 98;
+    width: 25vw ;
+    height: 35vh;
+}
+.rulesButton{
+    transform: translateY(-117vh);
+    z-index: 98;
+    width: 25vw ;
+    height: 35vh;
+    position: relative;
+    left: 85vw
+}
+#rules{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

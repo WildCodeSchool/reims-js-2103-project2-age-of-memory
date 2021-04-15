@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import ThemeApi from './.vscode/ThemeApi';
+
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Home />
-      <ThemeApi />
     </div>
   );
 }
