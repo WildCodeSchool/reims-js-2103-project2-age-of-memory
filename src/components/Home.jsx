@@ -14,6 +14,7 @@ function Home() {
   if (gameBoard === true) {
     return (<GameBoard />);
   }
+
   return (
     <>
       <div className="menu-play">
@@ -28,7 +29,7 @@ function Home() {
           className="browser-default custom-select"
         >
           {
-        Add.map((address, key) => <option value={key}>{address}</option>)
+        Add.map((address, key) => <option value={key}>Facile</option>)
       }
         </select>
 

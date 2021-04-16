@@ -9,16 +9,16 @@
 }
 
 .logo{
-    transform: translateY(-90vh);
+    transform: translateY(-94vh);
     z-index: 98;
-    width: 25vw ;
-    height: 35vh;
+    width: 29vw ;
+    height: 45vh;
 }
 .rulesButton{
-    transform: translateY(-117vh);
+    transform: translateY(-125vh);
     z-index: 98;
-    width: 25vw ;
-    height: 35vh;
+    width: 5vw ;
+    height: 5vh;
     position: relative;
     left: 85vw
 }
