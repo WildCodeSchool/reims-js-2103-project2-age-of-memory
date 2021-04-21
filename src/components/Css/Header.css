@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 .header{
     max-height: 500px;
 }
@@ -23,7 +24,14 @@
     left: 85vw
 }
 #rules{
-    width: 150px;
-    height: 150px;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
+    border: solid 0.1em;
+    border-color: #e1c264;
+    background-color: darkred;
+    font-size: 1.3em;
+    color: #e1c264;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    font-family: "Cinzel", serif;
 }
