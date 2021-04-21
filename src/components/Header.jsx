@@ -9,7 +9,7 @@ function Header() {
       <img className="Baniere" src={Baniere} alt="" />
       <img className="logo" src={logo} alt="Age of Memory" />
       <div className="rulesButton">
-        <button id="rules" type="button" onClick={() => alert('lorem ipsum')}>Règles</button>
+        <button id="rules" type="button" onClick={() => alert('Magie Noire')}>Règles</button>
       </div>
     </div>
   );

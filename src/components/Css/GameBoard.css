@@ -1,14 +1,8 @@
 .Gameboard{
    transform: translateY(-150px); 
    z-index: 98;
-   height: 75vh;
-    width: 80vh;
-    border: solid black 1px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-        margin: auto;
-        margin-bottom: 0px;
-        
+   display: grid;
+   grid-template-columns:repeat(7,7vw);
+   justify-content: center;
+   gap: 10px;    
 }
