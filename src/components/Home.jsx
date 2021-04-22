@@ -1,6 +1,7 @@
 import React from 'react';
 import GameBoard from './GameBoard';
 import './Css/Home.css';
+import SideSelect from './SideSelect';
 
 function Home() {
   const [addrtype, setAddrtype] = React.useState(['Facile', 'Moyen', 'Difficile', 'Hardcore']);
@@ -17,12 +18,17 @@ function Home() {
 
   return (
     <>
+      <div className="side-select">
+        <SideSelect />
+      </div>
       <div className="menu-play">
+
         <label htmlFor="Pseudo">
           <input className="input-pseudo" type="text" placeholder="Pseudo : Romain" value="" />
           <button className="btn-submit" type="button">Valider</button>
         </label>
       </div>
+
       <div className="btn-container">
         <div className="select-container">
           <select
@@ -32,6 +38,8 @@ function Home() {
             {
         Add.map((address, key) => <option value={key}>Facile</option>)
       }
+            {' '}
+
           </select>
         </div>
         <div className="play-container">

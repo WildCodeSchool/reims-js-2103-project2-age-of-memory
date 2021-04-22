@@ -60,3 +60,44 @@
     text-align: center;
 }
 
+.side-camp{
+    margin-bottom: 100px;
+}
+
+.title-camp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;  
+}
+
+.side-select-btn {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}   
+
+.btn-egypt {
+    font-family: 'Cinzel', serif;
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(70, 81, 88);
+    padding: .5em 2em .5em .9em;
+    font-size: 1em;
+    text-align: center;
+}
+
+.btn-roman {
+    font-family: 'Cinzel', serif;
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(70, 81, 88);
+    padding: .5em 2em .5em .9em;
+    font-size: 1em;
+    text-align: center;
+}
