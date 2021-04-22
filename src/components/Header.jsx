@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './assets/logo.png';
 import Baniere from './assets/Baniere.png';
 import './Css/Header.css';
-import './Css/fonts.css';
 
 function Header() {
   return (
