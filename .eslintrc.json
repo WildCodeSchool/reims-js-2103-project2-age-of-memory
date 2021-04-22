@@ -18,6 +18,15 @@
         "react"
     ],
     "rules": {
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "react/prop-types": "off",
+        "no-use-before-define": "off",
+        "no-shadow": "off",
+        "no-param-reassign":"off",
+        "prefer-const":"off",
+        "no-await-in-loop":"off",
+        "no-plusplus":"off"
     }
+   
+    
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import GameBoard from './GameBoard';
+import Easymode from './Easymode';
 import './Css/Home.css';
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
     setGameBoard(!gameBoard);
   }
   if (gameBoard === true) {
-    return (<GameBoard />);
+    return (<Easymode />);
   }
 
   return (

@@ -1,14 +1,28 @@
-.Gameboard{
-   transform: translateY(-150px); 
-   z-index: 98;
-   height: 75vh;
-    width: 80vh;
-    border: solid black 1px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-        margin: auto;
-        margin-bottom: 0px;
-        
+.playfield {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto,1vh);
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  z-index: 95;
+  transform: translateY(-200px);
+  max-width: 45vw;
+  max-height: 40vh;
 }
+
+.plateau{
+  display: flex;
+ justify-content: center;
+  
+}
+.statistics{
+
+  display: flex;
+  justify-content: center;
+  z-index: 95;
+  transform: translateY(-250px);
+  font-size: large;
+}
+
+

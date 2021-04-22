@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  justify-content: center;
+  min-width: 105px;
+  height: 150px;
+  vertical-align: top;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.card .not-opened {
+background-image:url(../assets/miniCardR.png);
+ width: 100px;
+ height:150px;
+}
+
+.card.matched {
+  cursor: default;
+}
+
+.card img {
+  display: flex;
+  width: 90%;
+  height: 95%;
+}
