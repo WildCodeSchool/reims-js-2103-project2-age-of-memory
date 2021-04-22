@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
 .menu-play{
-    z-index:98
+    z-index:98;
+    display: flex;
+    justify-content: center;
 }
+
+.input-pseudo {
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    color: rgb(70, 81, 88);
+    padding: .5em 2em .5em .9em;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+}
+
+.btn-submit {
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(70, 81, 88);
+    padding: .5em 2em .5em .9em;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+}
+
+
+.play-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.browser-default {
+   border: 1px solid rgb(207, 210, 219);
+   border-radius: .2em;
+   cursor: pointer;
+   color: rgb(70, 81, 88);
+   padding: .5em 2em .5em .9em;
+   font-family: 'Cinzel', serif;
+   font-size: 1em;
+}
+
+.btn-play {
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(70, 81, 88);
+    padding: .5em 2em .5em .9em;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    text-align: center;
+}
+
