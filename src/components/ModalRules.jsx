@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './Css/Header.css';
 
 function ModalRules({ children }) {
-  const [isOpen, setIsOpened] = useState(false);
-  if (isOpen === false) {
+  const [isOpened, setIsOpened] = useState(false);
+  function changeState() {
+    setIsOpened(!isOpened);
+  }
+
+  if (isOpened === false) {
     return <button type="button" id="rules" onClick={() => { setIsOpened(true); }}>Règles</button>;
   }
   return (
     <div id="myModal" className="modal">
       <div className="modal-content">
         {children}
-        <button type="button" onClick={() => { setIsOpened(false); }} className="card-button">Close</button>
+        <div id="card-button" role="button" aria-label="Close" tabIndex="-1" onKeyDown={changeState} onClick={changeState} className={changeState ? 'isOpened' : 'notOpened'} />
       </div>
     </div>
   );

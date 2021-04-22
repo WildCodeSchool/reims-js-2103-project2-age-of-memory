@@ -10,22 +10,45 @@ function Header() {
       <img className="Baniere" src={Baniere} alt="" />
       <img className="logo" src={logo} alt="Age of Memory" />
       <div className="rulesButton">
-        <ModalRules>
-          <div className="modal">
+        <div className="modal">
+          <ModalRules>
             <p className="rulestext">
-              Egypte et Empire Romain sont en guerre,
-              choisissez votre camp !\n Le thème du jeu ainsi que les cartes s
-              adapteront à votre choix, il y a plusieurs niveaux de difficulté possible,\n plus vous
-              jouez en difficulté élevée, plus vous gagnerez de points,
-              vous mettez ainsi toutes les chances de votre
-              côté pour faire gagner votre camp !\n * : il y a
-              4 niveaux principaux de difficulté qui augmentent à
-              chaque fois que vous finissez une partie.\n Exemple :
+              But du jeu :
+              <br />
+              Collecter des paires de cartes correspondantes.
+              <br />
+              <br />
+              L&apos;Egypte et L&apos;Empire Romain sont en guerre.
+              <br />
+              <br />
+              Choisissez votre camp !!!
+              <br />
+              <br />
+              Le thème du jeu ainsi que les cartes s
+              adapteront à votre choix.
+              <br />
+              <br />
+              Plusieurs niveaux de difficulté possible,
+              <br />
+              <br />
+              plus vous jouez en difficulté élevée,
+              <br />
+              plus vous gagnerez de points,
+              <br />
+              <br />
+              ainsi vous mettez toutes les chances de votre
+              côté pour faire gagner votre camp :
+              <br />
+              il y a 4 niveaux principaux de difficulté qui augmentent à
+              chaque fois que vous finissez une partie.
+              <br />
+              <br />
+              Exemple :
               pour le niveau facile, vous débuterez
               avec 3 paires de cartes, ensuite, 4, ensuite 5 etc...
             </p>
-          </div>
-        </ModalRules>
+          </ModalRules>
+        </div>
       </div>
     </div>
   );
