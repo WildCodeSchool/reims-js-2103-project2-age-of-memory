@@ -1,10 +1,10 @@
 import React from 'react';
-import Level6 from './ApiRomainLevel6';
+import Level from './Level';
 
 function Easymode() {
   return (
     <>
-      <Level6 />
+      <Level pairCount={3} />
     </>
   );
 }

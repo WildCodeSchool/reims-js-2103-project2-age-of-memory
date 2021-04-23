@@ -4,5 +4,5 @@
    display: grid;
    grid-template-columns:repeat(7,7vw);
    justify-content: center;
-   gap: 10px;    
+   gap: 1rem;    
 }
