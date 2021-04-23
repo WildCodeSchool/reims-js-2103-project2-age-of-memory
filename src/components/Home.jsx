@@ -1,6 +1,7 @@
 import React from 'react';
 import GameBoard from './GameBoard';
 import './Css/Home.css';
+import SideSelect from './SideSelect';
 
 function Home() {
   const [addrtype, setAddrtype] = React.useState(['Facile', 'Moyen', 'Difficile', 'Hardcore']);
@@ -17,23 +18,35 @@ function Home() {
 
   return (
     <>
+      <div className="side-select">
+        <SideSelect />
+      </div>
       <div className="menu-play">
+
         <label htmlFor="Pseudo">
-          Pseudo :
-          <input type="text" placeholder="Romain" value="" />
-          <button type="button">Valider</button>
+          <input className="input-pseudo" type="text" placeholder="Pseudo : Romain" value="" />
+          <button className="btn-submit" type="button">Valider</button>
         </label>
-        <button type="button" onClick={handleChangeBoolean}>Play</button>
-        <select
-          onChange={(e) => handleAddrTypeChange(e)}
-          className="browser-default custom-select"
-        >
-          {
+      </div>
+
+      <div className="btn-container">
+        <div className="select-container">
+          <select
+            onChange={(e) => handleAddrTypeChange(e)}
+            className="browser-default custom-select"
+          >
+            {
         Add.map((address, key) => <option value={key}>Facile</option>)
       }
-        </select>
+            {' '}
 
+          </select>
+        </div>
+        <div className="play-container">
+          <button className="btn-play" type="button" onClick={handleChangeBoolean}>Play</button>
+        </div>
       </div>
+
     </>
   );
 }
