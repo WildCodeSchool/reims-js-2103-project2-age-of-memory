@@ -1,11 +1,11 @@
 import React from 'react';
-import ThemeApi from './.vscode/ThemeApi';
 import './Css/GameBoard.css';
+import Easymode from './Easymode';
 
 function GameBoard() {
   return (
     <div className="Gameboard">
-      <ThemeApi />
+      <Easymode />
     </div>
   );
 }

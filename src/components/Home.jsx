@@ -1,5 +1,5 @@
 import React from 'react';
-import GameBoard from './GameBoard';
+import GameBoard from './Gameboard';
 import './Css/Home.css';
 import SideSelect from './SideSelect';
 
