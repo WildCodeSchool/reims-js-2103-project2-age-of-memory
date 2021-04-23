@@ -1,11 +1,11 @@
 import React from 'react';
-import GameBoard from './Gameboard';
+import GameBoard from './GameBoard';
 import './Css/Home.css';
 import SideSelect from './SideSelect';
 
+const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
+
 function Home() {
-  const [addrtype, setAddrtype] = React.useState(['Facile', 'Moyen', 'Difficile', 'Hardcore']);
-  const Add = addrtype.map(() => setAddrtype);
   const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
 
@@ -36,7 +36,7 @@ function Home() {
             className="browser-default custom-select"
           >
             {
-        Add.map((address, key) => <option value={key}>Facile</option>)
+        addrtype.map((address, key) => <option value={key}>{address}</option>)
       }
             {' '}
 
