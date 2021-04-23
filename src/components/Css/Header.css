@@ -15,6 +15,7 @@
     width: 29vw ;
     height: 45vh;
 }
+
 .rulesButton{
     transform: translateY(-125vh);
     z-index: 98;
@@ -23,6 +24,7 @@
     position: relative;
     left: 85vw
 }
+
 #rules{
     width: 115px;
     height: 115px;
