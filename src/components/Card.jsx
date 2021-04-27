@@ -4,14 +4,21 @@ import card from './assets/card.png';
 import './Css/Card.css';
 
 const Card = ({
-  imageUrl, id, setFirstCardClicked, setSecondCardClicked,
+  imageUrl, id, setFirstCardClicked, setSecondCardClicked, firstCardClicked,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   function changeState() {
     if (isVisible === false) {
       setIsVisible(!isVisible);
-      setFirstCardClicked(id);
-      setSecondCardClicked(id);
+      if (firstCardClicked != null) {
+        setSecondCardClicked({
+          id, setIsVisible,
+        });
+      } else {
+        setFirstCardClicked({
+          id, setIsVisible,
+        });
+      }
     }
   }
 
@@ -36,5 +43,9 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
   setFirstCardClicked: PropTypes.func.isRequired,
   setSecondCardClicked: PropTypes.func.isRequired,
+  firstCardClicked: PropTypes.string,
+};
+Card.defaultProps = {
+  firstCardClicked: undefined,
 };
 export default Card;

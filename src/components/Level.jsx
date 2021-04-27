@@ -6,8 +6,19 @@ import Card from './Card';
 function Level({ pairCount }) {
   const [firstCardClicked, setFirstCardClicked] = React.useState();
   const [secondCardClicked, setSecondCardClicked] = React.useState();
+
   React.useEffect(() => {
-    alert(firstCardClicked, secondCardClicked);
+    if (firstCardClicked != null && secondCardClicked != null) {
+      if (firstCardClicked.id === secondCardClicked.id) {
+        console.log('match');
+      } else {
+        console.log('NotMatch');
+        firstCardClicked.setIsVisible(false);
+        secondCardClicked.setIsVisible(false);
+      }
+      setFirstCardClicked(null);
+      setSecondCardClicked(null);
+    }
   }, [firstCardClicked, secondCardClicked]);
   const [imageList, setImageList] = React.useState([]);
   React.useEffect(() => {
@@ -28,6 +39,7 @@ function Level({ pairCount }) {
              key={image.id}
              imageUrl={image.urls.thumb}
              id={image.id}
+             firstCardClicked={firstCardClicked}
              setFirstCardClicked={setFirstCardClicked}
              setSecondCardClicked={setSecondCardClicked}
            />
