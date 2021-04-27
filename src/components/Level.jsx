@@ -4,6 +4,10 @@ import { tokenApi } from '../.vscode/constants';
 import Card from './Card';
 
 function Level({ pairCount }) {
+  const [firstCardClicked, setFirstCardClicked] = React.useState();
+  React.useEffect(() => {
+    alert(firstCardClicked);
+  }, [firstCardClicked]);
   const [imageList, setImageList] = React.useState([]);
   React.useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos/?client_id=${tokenApi}&query=Roman%20Empire&orientation=portrait&per_page=${pairCount}`)
@@ -19,7 +23,12 @@ function Level({ pairCount }) {
     <>
       {
          imageList.map((image) => (
-           <Card key={image.id} imageUrl={image.urls.thumb} id={image.id} />
+           <Card
+             key={image.id}
+             imageUrl={image.urls.thumb}
+             id={image.id}
+             setFirstCardClicked={setFirstCardClicked}
+           />
          ))
      }
     </>

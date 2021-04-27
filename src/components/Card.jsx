@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import card from './assets/card.png';
 import './Css/Card.css';
 
-const Card = ({ imageUrl }) => {
+const Card = ({ imageUrl, id, setFirstCardClicked }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   function changeState() {
-    setIsVisible(!isVisible);
+    if (isVisible === false) {
+      setIsVisible(!isVisible);
+      setFirstCardClicked(id);
+    }
   }
 
   return (
@@ -15,7 +18,7 @@ const Card = ({ imageUrl }) => {
       role="button"
       tabIndex="-1"
       onKeyDown={changeState}
-      onClick={!isVisible && changeState}
+      onClick={changeState}
     >
       <img
         className="card"
@@ -27,5 +30,7 @@ const Card = ({ imageUrl }) => {
 };
 Card.propTypes = {
   imageUrl: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  setFirstCardClicked: PropTypes.func.isRequired,
 };
 export default Card;
