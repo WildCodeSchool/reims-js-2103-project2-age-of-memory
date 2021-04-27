@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import card from './assets/card.png';
 import './Css/Card.css';
 
-const Card = ({ imageUrl, id, setFirstCardClicked }) => {
+const Card = ({
+  imageUrl, id, setFirstCardClicked, setSecondCardClicked,
+}) => {
   const [isVisible, setIsVisible] = React.useState(false);
   function changeState() {
     if (isVisible === false) {
       setIsVisible(!isVisible);
       setFirstCardClicked(id);
+      setSecondCardClicked(id);
     }
   }
 
@@ -32,5 +35,6 @@ Card.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   setFirstCardClicked: PropTypes.func.isRequired,
+  setSecondCardClicked: PropTypes.func.isRequired,
 };
 export default Card;

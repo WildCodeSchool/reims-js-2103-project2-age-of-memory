@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { tokenApi } from '../.vscode/constants';
+import { tokenApi } from './.vscode/constants';
 import Card from './Card';
 
 function Level({ pairCount }) {
   const [firstCardClicked, setFirstCardClicked] = React.useState();
+  const [secondCardClicked, setSecondCardClicked] = React.useState();
   React.useEffect(() => {
-    alert(firstCardClicked);
-  }, [firstCardClicked]);
+    alert(firstCardClicked, secondCardClicked);
+  }, [firstCardClicked, secondCardClicked]);
   const [imageList, setImageList] = React.useState([]);
   React.useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos/?client_id=${tokenApi}&query=Roman%20Empire&orientation=portrait&per_page=${pairCount}`)
@@ -28,6 +29,7 @@ function Level({ pairCount }) {
              imageUrl={image.urls.thumb}
              id={image.id}
              setFirstCardClicked={setFirstCardClicked}
+             setSecondCardClicked={setSecondCardClicked}
            />
          ))
      }
