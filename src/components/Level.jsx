@@ -19,7 +19,7 @@ function Level({ pairCount }) {
     <>
       {
          imageList.map((image) => (
-           <Card key={image.id} imageUrl={image.urls.thumb} />
+           <Card key={image.id} imageUrl={image.urls.thumb} id={image.id} />
          ))
      }
     </>
