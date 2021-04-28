@@ -12,7 +12,7 @@
 
 .logo{
     position: absolute;
-    bottom:45vh;
+    bottom:48vh;
     z-index: 99;
     height: 55vh;
     width: 33vw;
@@ -34,7 +34,7 @@
     border-radius: 50%;
     border: solid 0.1em;
     border-color: #e1c264;
-    background-color: darkred;
+    background-color:rgb(228, 212, 168);
     font-size: 1.3em;
     color: #e1c264;
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
@@ -66,12 +66,12 @@
 
 .modal {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: "Cinzel", serif;
 }
 
 .modal-content {
-    background-color: #490909;
+    background-color: rgb(228, 212, 168);
     border-radius: 10%;
     border: solid 0.35em #e1c264;
     height: auto;
@@ -83,7 +83,7 @@
     position: absolute;
     top: 10vh;
     right: 20vw;
-    z-index: 99;
+    z-index: 999;
 }
 
 #card-button {
