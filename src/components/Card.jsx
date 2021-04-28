@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import card from './assets/card.png';
+import card from './assets/cardE.png';
 import './Css/Card.css';
 
 const Card = ({ imageUrl }) => {
