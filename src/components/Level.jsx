@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { tokenApi } from '../.vscode/constants';
+import { tokenApi } from './.vscode/constants';
 import Card from './Card';
 
 function Level({ pairCount }) {

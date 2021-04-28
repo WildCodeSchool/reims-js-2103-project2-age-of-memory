@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './assets/logo.png';
-import Baniere from './assets/Baniere.png';
+import PropTypes from 'prop-types';
 import './Css/Header.css';
 import ModalRules from './ModalRules';
 
-function Header() {
+function Header({ Baniere, logo }) {
   return (
     <div className="header">
       <img className="Baniere" src={Baniere} alt="" />
@@ -53,5 +52,9 @@ function Header() {
     </div>
   );
 }
+Header.propTypes = {
+  Baniere: PropTypes.isRequired,
+  logo: PropTypes.isRequired,
+};
 
 export default Header;

@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GameBoard from './GameBoard';
 import './Css/Home.css';
-import SideSelect from './SideSelect';
 
 const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
 
-function Home() {
+function Home({ setSideSelect }) {
   const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
 
@@ -19,7 +19,16 @@ function Home() {
   return (
     <>
       <div className="side-select">
-        <SideSelect />
+        <div className="side-camp">
+          <div className="title-camp">
+            <h2>Choisis ton camp</h2>
+          </div>
+          <div className="side-select-btn">
+            <button type="button" className="btn-roman" onClick={() => setSideSelect(2)}>Romain</button>
+            <button type="button" className="btn-egypt" onClick={() => setSideSelect(3)}>Egyptien</button>
+
+          </div>
+        </div>
       </div>
       <div className="menu-play">
 
@@ -50,4 +59,7 @@ function Home() {
     </>
   );
 }
+Home.propTypes = {
+  setSideSelect: PropTypes.func.isRequired,
+};
 export default Home;

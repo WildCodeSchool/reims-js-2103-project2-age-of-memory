@@ -8,8 +8,9 @@ function SideSelect() {
         <h2>Choisis ton camp</h2>
       </div>
       <div className="side-select-btn">
-        <button type="button" className="btn-egypt">Egyptian</button>
-        <button type="button" className="btn-roman">Roman</button>
+        <button type="button" className="btn-egypt">Egyptien</button>
+        <button type="button" className="btn-roman">Romain</button>
+
       </div>
     </div>
   );
