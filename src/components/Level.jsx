@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { tokenApi } from './.vscode/constants';
 import Card from './Card';
 
-function Level({ pairCount }) {
+function Level({ pairCount, sideSelect }) {
   const [imageList, setImageList] = React.useState([]);
   React.useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos/?client_id=${tokenApi}&query=Roman%20Empire&orientation=portrait&per_page=${pairCount}`)
@@ -19,7 +19,7 @@ function Level({ pairCount }) {
     <>
       {
          imageList.map((image) => (
-           <Card key={image.id} imageUrl={image.urls.thumb} />
+           <Card key={image.id} imageUrl={image.urls.thumb} sideSelect={sideSelect} />
          ))
      }
     </>
@@ -27,5 +27,6 @@ function Level({ pairCount }) {
 }
 Level.propTypes = {
   pairCount: PropTypes.number.isRequired,
+  sideSelect: PropTypes.number.isRequired,
 };
 export default Level;

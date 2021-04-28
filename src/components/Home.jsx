@@ -5,7 +5,7 @@ import './Css/Home.css';
 
 const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
 
-function Home({ setSideSelect }) {
+function Home({ sideSelect, setSideSelect }) {
   const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
 
@@ -13,7 +13,7 @@ function Home({ setSideSelect }) {
     setGameBoard(!gameBoard);
   }
   if (gameBoard === true) {
-    return (<GameBoard />);
+    return (<GameBoard sideSelect={sideSelect} />);
   }
 
   return (
@@ -61,5 +61,6 @@ function Home({ setSideSelect }) {
 }
 Home.propTypes = {
   setSideSelect: PropTypes.func.isRequired,
+  sideSelect: PropTypes.number.isRequired,
 };
 export default Home;

@@ -14,21 +14,21 @@ function App() {
     return (
       <>
         <Header Baniere={BaniereRomain} logo={logo} />
-        <Home setSideSelect={setSideSelect} />
+        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} />
       </>
     );
   } if (sideSelect === 3) {
     return (
       <>
         <Header Baniere={BaniereEgypte} logo={logo} />
-        <Home setSideSelect={setSideSelect} />
+        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} />
       </>
     );
   }
   return (
     <div className="App">
       <Header Baniere={Baniere} logo={logo} />
-      <Home setSideSelect={setSideSelect} />
+      <Home setSideSelect={setSideSelect} sideSelect={sideSelect} />
     </div>
   );
 }

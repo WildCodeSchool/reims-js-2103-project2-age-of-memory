@@ -1,14 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import card from './assets/card.png';
 import './Css/Card.css';
+import cardE from './assets/cardE.png';
+import cardR from './assets/cardR.png';
 
-const Card = ({ imageUrl }) => {
+const Card = ({ imageUrl, sideSelect }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   function changeState() {
     setIsVisible(!isVisible);
   }
 
+  if (sideSelect === 2) {
+    return (
+      <div
+        className="card-container"
+        role="button"
+        tabIndex="-1"
+        onKeyDown={changeState}
+        onClick={!isVisible && changeState}
+      >
+        <img
+          className="card"
+          src={isVisible ? imageUrl : cardR}
+          alt=""
+        />
+      </div>
+    );
+  }
   return (
     <div
       className="card-container"
@@ -19,7 +37,7 @@ const Card = ({ imageUrl }) => {
     >
       <img
         className="card"
-        src={isVisible ? imageUrl : card}
+        src={isVisible ? imageUrl : cardE}
         alt=""
       />
     </div>
@@ -27,5 +45,6 @@ const Card = ({ imageUrl }) => {
 };
 Card.propTypes = {
   imageUrl: PropTypes.string.isRequired,
+  sideSelect: PropTypes.number.isRequired,
 };
 export default Card;
