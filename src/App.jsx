@@ -11,17 +11,19 @@ function App() {
   const [sideSelect, setSideSelect] = React.useState(1);
   console.log(sideSelect);
   if (sideSelect === 2) {
+    const urlSearch = 'Roman%20Empire';
     return (
       <>
         <Header Baniere={BaniereRomain} logo={logo} />
-        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} />
+        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} urlSearch={urlSearch} />
       </>
     );
   } if (sideSelect === 3) {
+    const urlSearch = 'Egypt';
     return (
       <>
         <Header Baniere={BaniereEgypte} logo={logo} />
-        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} />
+        <Home setSideSelect={setSideSelect} sideSelect={sideSelect} urlSearch={urlSearch} />
       </>
     );
   }
