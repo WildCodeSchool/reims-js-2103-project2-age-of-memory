@@ -2,14 +2,13 @@
 
 .home{
     position:absolute;
-    z-index: 99;
+    z-index: 98;
     bottom: 10vh;
     left: 75vh;
     width: 30vw;
     height: 45vh;
 }
 .menu-play{
-    z-index:98;
     display: flex;
     justify-content: center;
 }

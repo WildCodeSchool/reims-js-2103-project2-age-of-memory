@@ -2,7 +2,7 @@
    z-index: 98;
    position: absolute;
    left:25vw;
-   bottom:20vh;
+   bottom:30vh;
    display: grid;
    grid-template-columns:repeat(6,7vw);
    justify-content: center;
