@@ -10,7 +10,7 @@ const Card = ({ imageUrl, sideSelect }) => {
     setIsVisible(!isVisible);
   }
 
-  if (sideSelect === 2) {
+  if (sideSelect === 1) {
     return (
       <div
         className="card-container"

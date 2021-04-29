@@ -55,7 +55,6 @@ function Home({ sideSelect, setSideSelect, urlSearch }) {
           <button className="btn-play" type="button" onClick={handleChangeBoolean}>Play</button>
         </div>
       </div>
-
     </>
   );
 }

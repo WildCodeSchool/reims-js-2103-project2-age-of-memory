@@ -1,8 +1,10 @@
 .Gameboard{
-   transform: translateY(-150px); 
    z-index: 98;
+   position: absolute;
+   left:25vw;
+   bottom:30vh;
    display: grid;
-   grid-template-columns:repeat(7,7vw);
+   grid-template-columns:repeat(6,7vw);
    justify-content: center;
    gap: 1rem;    
 }
