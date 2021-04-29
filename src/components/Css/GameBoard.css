@@ -2,8 +2,8 @@
    z-index: 98;
    position: relative;
    display: grid;
-   top: 35vh;
    grid-template-columns:repeat(6,7vw);
    justify-content: center;
-   gap: 1rem;    
+   gap: 1rem; 
+   top: 10vh;   
 }

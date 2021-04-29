@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 
 .header{
-    max-height: 50px;
+    max-height: 300px;
 }
 
 .Baniere{
@@ -13,13 +13,17 @@
 
 .logo{
     position: relative;
-    bottom:110vh;}
+    bottom: 110vh;
+    height: 60vh;
+    width: 35vw;
+}
+
 
 .rulesButton{
     position: relative;
-    height: 50px;
     bottom: 150vh;
-    left: 40vw;
+    left: 85vw;
+    max-width: 60px;
 }
 
 #rules{
@@ -62,6 +66,7 @@
     text-align: center;
     color: rgb(0, 0, 0);
     font-family: "Cinzel", serif;
+    max-width: 60px;
 }
 
 .modal-content {
@@ -72,8 +77,7 @@
     width: 500px;
     position: relative;
     padding: 25px;
-    top: 10vh;
-    right: 5vw;
+    right: 53vw;
     z-index: 999;
 }
 
