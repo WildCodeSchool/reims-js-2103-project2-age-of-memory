@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
 .home{
-    position:absolute;
+    position: relative;
     z-index: 98;
-    bottom: 10vh;
-    left: 75vh;
-    width: 30vw;
-    height: 45vh;
+    top: 20vh;
 }
 .menu-play{
     display: flex;
