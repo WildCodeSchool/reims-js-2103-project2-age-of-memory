@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Css/Header.css';
 import ModalRules from './ModalRules';
+import BaniereDefault from './assets/Baniere.png';
 
-function Header({ Baniere, logo }) {
+function Header({ baniere, logo }) {
   return (
     <div className="header">
-      <img className="Baniere" src={Baniere} alt="" />
+      <img className="Baniere" src={baniere ?? BaniereDefault} alt="" />
       <img className="logo" src={logo} alt="Age of Memory" />
       <div className="rulesButton">
         <div className="modal">
@@ -53,7 +54,7 @@ function Header({ Baniere, logo }) {
   );
 }
 Header.propTypes = {
-  Baniere: PropTypes.isRequired,
+  baniere: PropTypes.isRequired,
   logo: PropTypes.isRequired,
 };
 

@@ -24,8 +24,8 @@ function Home({ sideSelect, setSideSelect, urlSearch }) {
             <h2>Choisis ton camp</h2>
           </div>
           <div className="side-select-btn">
-            <button type="button" className="btn-roman" onClick={() => setSideSelect(2)}>Romain</button>
-            <button type="button" className="btn-egypt" onClick={() => setSideSelect(3)}>Egyptien</button>
+            <button type="button" className="btn-roman" onClick={() => setSideSelect(1)}>Romain</button>
+            <button type="button" className="btn-egypt" onClick={() => setSideSelect(2)}>Egyptien</button>
 
           </div>
         </div>
