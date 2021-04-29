@@ -5,7 +5,11 @@ import './Css/Home.css';
 
 const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
 
-function Home({ sideSelect, setSideSelect, urlSearch }) {
+function Home({ sideSelect, setSideSelect }) {
+  const sideSelectMap = {
+    1: 'Roman%20Empire',
+    2: 'Egypt',
+  };
   const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
 
@@ -13,7 +17,7 @@ function Home({ sideSelect, setSideSelect, urlSearch }) {
     setGameBoard(!gameBoard);
   }
   if (gameBoard === true) {
-    return (<GameBoard sideSelect={sideSelect} urlSearch={urlSearch} />);
+    return (<GameBoard sideSelect={sideSelect} urlSearch={sideSelectMap[sideSelect]} />);
   }
 
   return (
@@ -61,6 +65,5 @@ function Home({ sideSelect, setSideSelect, urlSearch }) {
 Home.propTypes = {
   setSideSelect: PropTypes.func.isRequired,
   sideSelect: PropTypes.number.isRequired,
-  urlSearch: PropTypes.string.isRequired,
 };
 export default Home;
