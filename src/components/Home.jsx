@@ -14,7 +14,11 @@ function Home({ sideSelect, setSideSelect }) {
   const [gameBoard, setGameBoard] = React.useState(false);
 
   function handleChangeBoolean() {
-    setGameBoard(!gameBoard);
+    if (sideSelect != null) {
+      setGameBoard(!gameBoard);
+    } else {
+      alert('Choisis d\'abord ton camp pour pouvoir jouer !');
+    }
   }
   if (gameBoard === true) {
     return (<GameBoard sideSelect={sideSelect} urlSearch={sideSelectMap[sideSelect]} />);
