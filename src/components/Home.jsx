@@ -61,7 +61,7 @@ function Home({ sideSelect, setSideSelect }) {
       <div className="btn-container">
         <div className="select-container">
 
-          <select name="browser-default custom-select" onChange={onChangeLevelSelector}>
+          <select className="browser-default custom-select" onChange={onChangeLevelSelector}>
             <option value={3}>Facile</option>
             <option value={6}>Moyen</option>
             <option value={9}>Difficile</option>
