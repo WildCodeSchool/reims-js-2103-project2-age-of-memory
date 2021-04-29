@@ -3,14 +3,19 @@ import PropTypes from 'prop-types';
 import GameBoard from './GameBoard';
 import './Css/Home.css';
 
-const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
+// const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
 
 function Home({ sideSelect, setSideSelect }) {
   const sideSelectMap = {
     1: 'Roman%20Empire',
     2: 'Egypt',
   };
-  const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
+
+  const [levelSelector, setLevelSelector] = React.useState(3);
+  function onChangeLevelSelector(e) {
+    setLevelSelector(e.target.value);
+  }
+  // const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
 
   function handleChangeBoolean() {
@@ -21,7 +26,14 @@ function Home({ sideSelect, setSideSelect }) {
     }
   }
   if (gameBoard === true) {
-    return (<GameBoard sideSelect={sideSelect} urlSearch={sideSelectMap[sideSelect]} />);
+    return (
+      <GameBoard
+        sideSelect={sideSelect}
+        urlSearch={sideSelectMap[sideSelect]}
+        pairCount={levelSelector}
+
+      />
+    );
   }
 
   return (
@@ -48,7 +60,15 @@ function Home({ sideSelect, setSideSelect }) {
 
       <div className="btn-container">
         <div className="select-container">
-          <select
+
+          <select name="browser-default custom-select" onChange={onChangeLevelSelector}>
+            <option value={3}>Facile</option>
+            <option value={6}>Moyen</option>
+            <option value={9}>Difficile</option>
+            <option value={12}>Hardcore</option>
+          </select>
+          {console.log(levelSelector)}
+          {/* <select
             onChange={(e) => handleAddrTypeChange(e)}
             className="browser-default custom-select"
           >
@@ -57,7 +77,8 @@ function Home({ sideSelect, setSideSelect }) {
       }
             {' '}
 
-          </select>
+    </select> */}
+
         </div>
         <div className="play-container">
           <button className="btn-play" type="button" onClick={handleChangeBoolean}>Play</button>
