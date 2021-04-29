@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './assets/logo.png';
-import Baniere from './assets/Baniere.png';
+import PropTypes from 'prop-types';
 import './Css/Header.css';
 import ModalRules from './ModalRules';
+import BaniereDefault from './assets/Baniere.png';
+import BaniereRomain from './assets/BaniereRomain.png';
+import BaniereEgypte from './assets/BaniereEgypte.png';
 
-function Header() {
+function Header({ logo, sideSelect }) {
+  const baniereSelectMap = {
+    1: BaniereRomain,
+    2: BaniereEgypte,
+  };
   return (
     <div className="header">
-      <img className="Baniere" src={Baniere} alt="" />
+      <img className="Baniere" src={baniereSelectMap[sideSelect] ?? BaniereDefault} alt="" />
       <img className="logo" src={logo} alt="Age of Memory" />
       <div className="rulesButton">
         <div className="modal">
@@ -53,5 +59,9 @@ function Header() {
     </div>
   );
 }
+Header.propTypes = {
+  logo: PropTypes.isRequired,
+  sideSelect: PropTypes.number.isRequired,
+};
 
 export default Header;

@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import card from './assets/cardE.png';
 import './Css/Card.css';
+import cardE from './assets/cardE.png';
+import cardR from './assets/cardR.png';
 
 const Card = ({
-  imageUrl, id, setFirstCardClicked, setSecondCardClicked, firstCardClicked,
+  imageUrl, id, setFirstCardClicked, setSecondCardClicked, firstCardClicked, sideSelect,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
+  const cardSelectMap = {
+    1: cardR,
+    2: cardE,
+  };
   function changeState() {
     if (isVisible === false) {
       setIsVisible(!isVisible);
@@ -27,11 +32,11 @@ const Card = ({
       role="button"
       tabIndex="-1"
       onKeyDown={changeState}
-      onClick={changeState}
+      onClick={!isVisible ? changeState : null}
     >
       <img
         className="card"
-        src={isVisible ? imageUrl : card}
+        src={isVisible ? imageUrl : cardSelectMap[sideSelect]}
         alt=""
       />
     </div>
@@ -43,6 +48,7 @@ Card.propTypes = {
   setFirstCardClicked: PropTypes.func.isRequired,
   setSecondCardClicked: PropTypes.func.isRequired,
   firstCardClicked: PropTypes.string,
+  sideSelect: PropTypes.number.isRequired,
 };
 Card.defaultProps = {
   firstCardClicked: undefined,
