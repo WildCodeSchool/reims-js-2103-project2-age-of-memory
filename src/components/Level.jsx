@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { tokenApi } from './.vscode/constants';
 import Card from './Card';
 
-function Level({ pairCount, sideSelect, urlSearch }) {
+function Level({
+  pairCount, sideSelect, urlSearch, setCurrentPairCount, currentPairCount,
+}) {
   const [firstCardClicked, setFirstCardClicked] = React.useState();
   const [secondCardClicked, setSecondCardClicked] = React.useState();
 
@@ -11,6 +13,7 @@ function Level({ pairCount, sideSelect, urlSearch }) {
     if (firstCardClicked != null && secondCardClicked != null) {
       if (firstCardClicked.id === secondCardClicked.id) {
         console.log('match');
+        setCurrentPairCount(currentPairCount + 1);
       } else {
         console.log('NotMatch');
         setTimeout(() => firstCardClicked.setIsVisible(false), 1000);
@@ -53,5 +56,7 @@ Level.propTypes = {
   pairCount: PropTypes.number.isRequired,
   sideSelect: PropTypes.number.isRequired,
   urlSearch: PropTypes.string.isRequired,
+  setCurrentPairCount: PropTypes.func.isRequired,
+  currentPairCount: PropTypes.number.isRequired,
 };
 export default Level;
