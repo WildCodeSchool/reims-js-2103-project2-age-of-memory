@@ -50,13 +50,6 @@ function Home({ sideSelect, setSideSelect }) {
           </div>
         </div>
       </div>
-      <div className="menu-play">
-
-        <label htmlFor="Pseudo">
-          <input className="input-pseudo" type="text" placeholder="Pseudo : Romain" value="" />
-          <button className="btn-submit" type="button">Valider</button>
-        </label>
-      </div>
 
       <div className="btn-container">
         <div className="select-container">
