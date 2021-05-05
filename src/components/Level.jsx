@@ -16,8 +16,8 @@ function Level({
         setCurrentPairCount(currentPairCount + 1);
       } else {
         console.log('NotMatch');
-        setTimeout(() => firstCardClicked.setIsVisible(false), 1000);
-        setTimeout(() => secondCardClicked.setIsVisible(false), 1000);
+        setTimeout(() => firstCardClicked.setIsVisible(false), 500);
+        setTimeout(() => secondCardClicked.setIsVisible(false), 500);
       }
       setFirstCardClicked(null);
       setSecondCardClicked(null);
@@ -40,7 +40,7 @@ function Level({
         pairs.sort(() => Math.random() - 0.5);
         setImageList(pairs);
       });
-  }, []);
+  }, [pairCount]);
 
   return (
     <>
@@ -54,6 +54,8 @@ function Level({
              setFirstCardClicked={setFirstCardClicked}
              setSecondCardClicked={setSecondCardClicked}
              sideSelect={sideSelect}
+             pairCount={pairCount}
+
            />
          ))
      }

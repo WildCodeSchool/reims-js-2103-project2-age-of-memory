@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Level from './Level';
 
 function Easymode({
-  sideSelect, urlSearch, pairCount, setCurrentPairCount, currentPairCount,
+  sideSelect, urlSearch, pairCount, setCurrentPairCount, currentPairCount, setPairCount,
 }) {
   return (
     <>
@@ -13,6 +13,7 @@ function Easymode({
         urlSearch={urlSearch}
         setCurrentPairCount={setCurrentPairCount}
         currentPairCount={currentPairCount}
+        setPairCount={setPairCount}
       />
     </>
   );
@@ -23,5 +24,6 @@ Easymode.propTypes = {
   pairCount: PropTypes.number.isRequired,
   setCurrentPairCount: PropTypes.func.isRequired,
   currentPairCount: PropTypes.number.isRequired,
+  setPairCount: PropTypes.func.isRequired,
 };
 export default Easymode;
