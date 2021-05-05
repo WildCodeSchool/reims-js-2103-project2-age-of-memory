@@ -7,3 +7,14 @@
    gap: 1rem; 
    top: 10vh;   
 }
+
+@media (max-width: 750px) {
+   .Gameboard {
+      position: relative;
+      bottom:30vh;
+      gap:0.8rem;
+      grid-template-columns:repeat(6,45px);
+      margin-right: 20px;
+      z-index: 99;
+   }
+}

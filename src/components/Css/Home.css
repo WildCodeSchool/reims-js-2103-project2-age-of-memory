@@ -105,3 +105,14 @@
     font-size: 1em;
     text-align: center;
 }
+
+@media (max-width: 960px) {
+    .side-select {
+        display: flex;
+        justify-content: center;
+    }
+    .side-select-btn {
+        display: inline-block;
+    }
+
+}
