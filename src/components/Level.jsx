@@ -11,7 +11,7 @@ function Level({
 
   React.useEffect(() => {
     if (firstCardClicked != null && secondCardClicked != null) {
-      if (firstCardClicked.id === secondCardClicked.id) {
+      if (firstCardClicked.id.slice(0, -2) === secondCardClicked.id.slice(0, -2)) {
         console.log('match');
         setCurrentPairCount(currentPairCount + 1);
       } else {
@@ -28,9 +28,17 @@ function Level({
     fetch(`https://api.unsplash.com/search/photos/?client_id=${tokenApi}&query=${urlSearch}&orientation=portrait&per_page=${pairCount}`)
       .then((response) => response.json())
       .then((data) => {
-        const shuffledImageList = [...data.results, ...data.results];
-        shuffledImageList.sort(() => Math.random() - 0.5);
-        setImageList(shuffledImageList);
+        const pairs = data.results.reduce((acc, image) => {
+          const { id } = image;
+          return [
+            ...acc,
+            { ...image, id: `${id}a` },
+            { ...image, id: `${id}b` },
+          ];
+        }, []);
+
+        pairs.sort(() => Math.random() - 0.5);
+        setImageList(pairs);
       });
   }, []);
 

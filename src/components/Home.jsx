@@ -13,7 +13,7 @@ function Home({ sideSelect, setSideSelect }) {
 
   const [levelSelector, setLevelSelector] = React.useState(3);
   function onChangeLevelSelector(e) {
-    setLevelSelector(e.target.value);
+    setLevelSelector(parseInt(e.target.value, 10));
   }
   // const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
@@ -31,7 +31,6 @@ function Home({ sideSelect, setSideSelect }) {
         sideSelect={sideSelect}
         urlSearch={sideSelectMap[sideSelect]}
         pairCount={levelSelector}
-
       />
     );
   }
