@@ -12,10 +12,8 @@ function Level({
   React.useEffect(() => {
     if (firstCardClicked != null && secondCardClicked != null) {
       if (firstCardClicked.id.slice(0, -2) === secondCardClicked.id.slice(0, -2)) {
-        console.log('match');
         setCurrentPairCount(currentPairCount + 1);
       } else {
-        console.log('NotMatch');
         setTimeout(() => firstCardClicked.setIsVisible(false), 500);
         setTimeout(() => secondCardClicked.setIsVisible(false), 500);
       }
