@@ -19,6 +19,19 @@ function GameBoard({
     } else {
       setEndPageIsDisplayed(true);
     }
+      setGameBoard(false);
+    }
+  }
+  function modalWin() {
+    return (
+      <>
+        <div className="ModalWin">
+          <p className="Win">Niveau complété, bien Joué ! 🧙🏽‍♂️ </p>
+          <button className="button" type="button" onClick={() => { setGameBoard(false); }}>Accueil</button>
+          <button className="button" type="button" onClick={nexttLevel}>Niveau Suivant</button>
+        </div>
+      </>
+    );
   }
   return (
     <>
@@ -27,20 +40,17 @@ function GameBoard({
         {' '}
         {currentPairCount}
         {' '}
-        of
+        sur
         {' '}
         {pairCount}
       </span>
 
       { currentPairCount === pairCount && (
-        <div className="ModalWin">
-          <p className="Win">Bien Joué bg t&apos;es un adepte de magie noire !!</p>
-          <button className="button" type="button" onClick={() => { setGameBoard(false); }}>Accueil</button>
-          <button className="button" type="button" onClick={nexttLevel}>Niveau Suivant</button>
-        </div>
+        modalWin()
       )}
 
       <div className="Gameboard">
+        { currentPairCount !== pairCount && (
         <Easymode
           sideSelect={sideSelect}
           urlSearch={urlSearch}
@@ -49,6 +59,7 @@ function GameBoard({
           currentPairCount={currentPairCount}
           setPairCount={setPairCount}
         />
+        )}
       </div>
     </>
   );

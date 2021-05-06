@@ -14,6 +14,19 @@
     border-radius: 5px;
 }
 
-
+@media (max-width: 750px) {
+  .card-container {    
+  width: 60px;
+  height: 90px;
+  cursor: pointer;
+  z-index: 98;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.card {
+ width: 100%;
+ height: 100%;
+}
+}
 
 

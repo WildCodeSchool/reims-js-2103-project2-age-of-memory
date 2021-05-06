@@ -95,4 +95,23 @@
 opacity: 0.3;
 }
 
-
+@media (max-width: 750px) {
+    body {
+        background-image: url(../assets/backgroundMobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .Baniere {
+      display: none;
+    }
+    .rulesButton {
+        display: none;
+    }
+    .bannerFlex {
+     max-height:190px;
+     background-image: url("../assets/logo.png");
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: 80%;
+    }
+}

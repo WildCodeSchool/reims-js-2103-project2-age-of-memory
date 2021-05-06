@@ -14,7 +14,9 @@ function Header({ logo, sideSelect }) {
   return (
     <div className="header">
       <img className="Baniere" src={baniereSelectMap[sideSelect] ?? BaniereDefault} alt="" />
-      <img className="logo" src={logo} alt="Age of Memory" />
+      <div className="bannerFlex">
+        <img className="logo" src={logo} alt="Age of Memory" />
+      </div>
       <div className="rulesButton">
         <div className="modal">
           <ModalRules>

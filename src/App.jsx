@@ -16,15 +16,23 @@ function App() {
       </>
     );
   }
+  const [gameBoard, setGameBoard] = React.useState(false);
 
   return (
     <>
-      <Header sideSelect={sideSelect} logo={logo} />
+      <Header
+        sideSelect={sideSelect}
+        logo={logo}
+        gameBoard={gameBoard}
+        setGameBoard={setGameBoard}
+      />
       <Home
         setSideSelect={setSideSelect}
         sideSelect={sideSelect}
         endPageIsDisplayed={endPageIsDisplayed}
         setEndPageIsDisplayed={setEndPageIsDisplayed}
+        gameBoard={gameBoard}
+        setGameBoard={setGameBoard}
       />
     </>
   );
