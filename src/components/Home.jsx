@@ -4,7 +4,11 @@ import GameBoard from './GameBoard';
 import './Css/Home.css';
 
 function Home({
-  sideSelect, setSideSelect, gameBoard, setGameBoard,
+  sideSelect,
+  setSideSelect,
+  gameBoard,
+  setGameBoard,
+  setEndPageIsDisplayed
 }) {
   const sideSelectMap = {
     1: 'Roman%20Empire',
@@ -45,6 +49,7 @@ function Home({
         pairCount={pairCount}
         setPairCount={setPairCount}
         setGameBoard={setGameBoard}
+        setEndPageIsDisplayed={setEndPageIsDisplayed}
       />
     );
   }
@@ -85,6 +90,7 @@ function Home({
 Home.propTypes = {
   setSideSelect: PropTypes.func.isRequired,
   sideSelect: PropTypes.number.isRequired,
+  setEndPageIsDisplayed: PropTypes.func.isRequired,
   gameBoard: PropTypes.bool.isRequired,
   setGameBoard: PropTypes.func.isRequired,
 };

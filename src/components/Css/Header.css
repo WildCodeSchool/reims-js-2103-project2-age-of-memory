@@ -37,6 +37,11 @@
     color: #e1c264;
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
     font-family: "Cinzel", serif;
+    cursor: pointer;
+}
+
+#rules:hover {
+    opacity: 0.3;
 }
 
 .isOpened {
