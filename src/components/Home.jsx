@@ -10,10 +10,24 @@ function Home({ sideSelect, setSideSelect }) {
     1: 'Roman%20Empire',
     2: 'Egypt',
   };
+  const [buttonRomanClicked, setButtonRomanClicked] = React.useState(false);
+  const [buttonEgyptClicked, setButtonEgyptClicked] = React.useState(false);
 
-  const [levelSelector, setLevelSelector] = React.useState(3);
-  function onChangeLevelSelector(e) {
-    setLevelSelector(e.target.value);
+  function onClickButtonRoman() {
+    setSideSelect(1);
+    setButtonRomanClicked(!buttonRomanClicked);
+    setButtonEgyptClicked(false);
+  }
+
+  function onClickButtonEgypt() {
+    setSideSelect(2);
+    setButtonEgyptClicked(!buttonEgyptClicked);
+    setButtonRomanClicked(false);
+  }
+
+  const [pairCount, setPairCount] = React.useState(3);
+  function onChangePairCount(e) {
+    setPairCount(parseInt(e.target.value, 10));
   }
   // const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
   const [gameBoard, setGameBoard] = React.useState(false);
@@ -30,8 +44,9 @@ function Home({ sideSelect, setSideSelect }) {
       <GameBoard
         sideSelect={sideSelect}
         urlSearch={sideSelectMap[sideSelect]}
-        pairCount={levelSelector}
-
+        pairCount={pairCount}
+        setPairCount={setPairCount}
+        setGameBoard={setGameBoard}
       />
     );
   }
@@ -44,30 +59,22 @@ function Home({ sideSelect, setSideSelect }) {
             <h2>Choisis ton camp</h2>
           </div>
           <div className="side-select-btn">
-            <button type="button" className="btn-roman" onClick={() => setSideSelect(1)}>Romain</button>
-            <button type="button" className="btn-egypt" onClick={() => setSideSelect(2)}>Egyptien</button>
+            <button type="button" className={buttonRomanClicked ? 'btn-roman-clicked' : 'btn-roman'} onClick={onClickButtonRoman}>Romain</button>
+            <button type="button" className={buttonEgyptClicked ? 'btn-egypt-clicked' : 'btn-egypt'} onClick={onClickButtonEgypt}>Egyptien</button>
 
           </div>
         </div>
-      </div>
-      <div className="menu-play">
-
-        <label htmlFor="Pseudo">
-          <input className="input-pseudo" type="text" placeholder="Pseudo : Romain" value="" />
-          <button className="btn-submit" type="button">Valider</button>
-        </label>
       </div>
 
       <div className="btn-container">
         <div className="select-container">
 
-          <select className="browser-default custom-select" onChange={onChangeLevelSelector}>
+          <select className="browser-default custom-select" onChange={onChangePairCount}>
             <option value={3}>Facile</option>
             <option value={6}>Moyen</option>
             <option value={9}>Difficile</option>
             <option value={12}>Hardcore</option>
           </select>
-          {console.log(levelSelector)}
           {/* <select
             onChange={(e) => handleAddrTypeChange(e)}
             className="browser-default custom-select"

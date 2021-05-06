@@ -62,7 +62,7 @@ function Header({ logo, sideSelect }) {
   );
 }
 Header.propTypes = {
-  logo: PropTypes.isRequired,
+  logo: PropTypes.string.isRequired,
   sideSelect: PropTypes.number.isRequired,
 };
 

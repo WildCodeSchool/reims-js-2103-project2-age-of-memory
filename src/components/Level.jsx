@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 import { tokenApi } from './.vscode/constants';
 import Card from './Card';
 
-function Level({ pairCount, sideSelect, urlSearch }) {
+function Level({
+  pairCount, sideSelect, urlSearch, setCurrentPairCount, currentPairCount,
+}) {
   const [firstCardClicked, setFirstCardClicked] = React.useState();
   const [secondCardClicked, setSecondCardClicked] = React.useState();
 
   React.useEffect(() => {
     if (firstCardClicked != null && secondCardClicked != null) {
-      if (firstCardClicked.id === secondCardClicked.id) {
+      if (firstCardClicked.id.slice(0, -2) === secondCardClicked.id.slice(0, -2)) {
         console.log('match');
+        setCurrentPairCount(currentPairCount + 1);
       } else {
         console.log('NotMatch');
-        setTimeout(() => firstCardClicked.setIsVisible(false), 1000);
-        setTimeout(() => secondCardClicked.setIsVisible(false), 1000);
+        setTimeout(() => firstCardClicked.setIsVisible(false), 500);
+        setTimeout(() => secondCardClicked.setIsVisible(false), 500);
       }
       setFirstCardClicked(null);
       setSecondCardClicked(null);
@@ -25,11 +28,19 @@ function Level({ pairCount, sideSelect, urlSearch }) {
     fetch(`https://api.unsplash.com/search/photos/?client_id=${tokenApi}&query=${urlSearch}&orientation=portrait&per_page=${pairCount}`)
       .then((response) => response.json())
       .then((data) => {
-        const shuffledImageList = [...data.results, ...data.results];
-        shuffledImageList.sort(() => Math.random() - 0.5);
-        setImageList(shuffledImageList);
+        const pairs = data.results.reduce((acc, image) => {
+          const { id } = image;
+          return [
+            ...acc,
+            { ...image, id: `${id}a` },
+            { ...image, id: `${id}b` },
+          ];
+        }, []);
+
+        pairs.sort(() => Math.random() - 0.5);
+        setImageList(pairs);
       });
-  }, []);
+  }, [pairCount]);
 
   return (
     <>
@@ -43,6 +54,8 @@ function Level({ pairCount, sideSelect, urlSearch }) {
              setFirstCardClicked={setFirstCardClicked}
              setSecondCardClicked={setSecondCardClicked}
              sideSelect={sideSelect}
+             pairCount={pairCount}
+
            />
          ))
      }
@@ -53,5 +66,7 @@ Level.propTypes = {
   pairCount: PropTypes.number.isRequired,
   sideSelect: PropTypes.number.isRequired,
   urlSearch: PropTypes.string.isRequired,
+  setCurrentPairCount: PropTypes.func.isRequired,
+  currentPairCount: PropTypes.number.isRequired,
 };
 export default Level;
