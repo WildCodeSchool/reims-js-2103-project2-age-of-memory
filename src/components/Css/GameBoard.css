@@ -6,9 +6,19 @@
    display: grid;
    grid-template-columns:repeat(6,110px);
    justify-content: center;
-   gap: 0.5rem; 
-   top: 7vh;   
+    gap: 0.5rem; 
+   top: 7vh;    
 }
+
+@media (max-width: 750px) {
+   .Gameboard {
+      position: relative;
+      bottom:30vh;
+      gap:0.8rem;
+      grid-template-columns:repeat(6,45px);
+      margin-right: 20px;
+      z-index: 99;
+   }
 
 .pairMatched{
    z-index: 98;

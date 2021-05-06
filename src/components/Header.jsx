@@ -18,15 +18,15 @@ function Header({ logo, sideSelect, setGameBoard }) {
 
   return (
     <div className="header">
-      <img className="Baniere" src={baniereSelectMap[sideSelect] ?? BaniereDefault} alt="" />
-      <div
+      <div 
+        className="bannerFlex"
         role="button"
         tabIndex="-1"
         onKeyDown={homeButton}
         onClick={homeButton}
       >
         <img className="logo" src={logo} alt="Age of Memory " />
-      </div>
+       </div>
       <div className="rulesButton">
         <div className="modal">
           <ModalRules>

@@ -103,6 +103,17 @@
     text-align: center;
 }
 
+
+@media (max-width: 960px) {
+    .side-select {
+        display: flex;
+        justify-content: center;
+    }
+    .side-select-btn {
+        display: inline-block;
+    }
+
+}
 .btn-roman-clicked {
     font-family: 'Cinzel', serif;
     border: 1px solid rgb(207, 210, 219);
@@ -128,3 +139,4 @@
     grid-row: 1 / 2;
     background-color: rgb(23, 21, 114);
 }
+

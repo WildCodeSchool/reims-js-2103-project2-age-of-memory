@@ -90,4 +90,24 @@
 opacity: 0.3;
 }
 
-
+@media (max-width: 750px) {
+    body {
+        background-color:whitesmoke;
+    }
+    .header{
+       /* max-height: 150px; */
+    }
+    .Baniere {
+      display: none;
+    }
+    .rulesButton {
+        display: none;
+    }
+    .bannerFlex {
+     max-height:190px;
+     background-image: url("../assets/logo.png");
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: 80%;
+    }
+}
