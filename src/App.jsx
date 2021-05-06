@@ -8,7 +8,8 @@ import EndPage from './components/EndPage';
 function App() {
   const [sideSelect, setSideSelect] = React.useState();
   const [endPageIsDisplayed, setEndPageIsDisplayed] = React.useState(false);
-  if (endPageIsDisplayed) {
+  const [gameBoard, setGameBoard] = React.useState(false);
+  if (endPageIsDisplayed === true) {
     return (
       <>
         <Header sideSelect={sideSelect} logo={logo} />
@@ -16,7 +17,6 @@ function App() {
       </>
     );
   }
-  const [gameBoard, setGameBoard] = React.useState(false);
 
   return (
     <>

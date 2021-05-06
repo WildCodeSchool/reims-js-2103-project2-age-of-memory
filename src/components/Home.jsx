@@ -8,7 +8,7 @@ function Home({
   setSideSelect,
   gameBoard,
   setGameBoard,
-  setEndPageIsDisplayed
+  setEndPageIsDisplayed,
 }) {
   const sideSelectMap = {
     1: 'Roman%20Empire',
