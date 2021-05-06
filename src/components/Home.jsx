@@ -5,7 +5,7 @@ import './Css/Home.css';
 
 // const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
 
-function Home({ sideSelect, setSideSelect }) {
+function Home({ sideSelect, setSideSelect, setEndPageIsDisplayed }) {
   const sideSelectMap = {
     1: 'Roman%20Empire',
     2: 'Egypt',
@@ -47,6 +47,7 @@ function Home({ sideSelect, setSideSelect }) {
         pairCount={pairCount}
         setPairCount={setPairCount}
         setGameBoard={setGameBoard}
+        setEndPageIsDisplayed={setEndPageIsDisplayed}
       />
     );
   }
@@ -97,5 +98,6 @@ function Home({ sideSelect, setSideSelect }) {
 Home.propTypes = {
   setSideSelect: PropTypes.func.isRequired,
   sideSelect: PropTypes.number.isRequired,
+  setEndPageIsDisplayed: PropTypes.func.isRequired,
 };
 export default Home;

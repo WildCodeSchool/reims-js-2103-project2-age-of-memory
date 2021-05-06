@@ -4,12 +4,21 @@ import './Css/GameBoard.css';
 import Easymode from './Easymode';
 
 function GameBoard({
-  sideSelect, urlSearch, pairCount, setPairCount, setGameBoard,
+  sideSelect,
+  urlSearch,
+  pairCount,
+  setPairCount,
+  setGameBoard,
+  setEndPageIsDisplayed,
 }) {
   const [currentPairCount, setCurrentPairCount] = React.useState(0);
   function nexttLevel() {
-    setPairCount(pairCount + 3);
-    setCurrentPairCount(0);
+    if (pairCount < 12) {
+      setPairCount(pairCount + 3);
+      setCurrentPairCount(0);
+    } else {
+      setEndPageIsDisplayed(true);
+    }
   }
   return (
     <>
@@ -50,6 +59,7 @@ GameBoard.propTypes = {
   pairCount: PropTypes.number.isRequired,
   setPairCount: PropTypes.func.isRequired,
   setGameBoard: PropTypes.func.isRequired,
+  setEndPageIsDisplayed: PropTypes.func.isRequired,
 };
 
 export default GameBoard;
