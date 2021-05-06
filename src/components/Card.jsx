@@ -5,7 +5,8 @@ import cardE from './assets/cardE.png';
 import cardR from './assets/cardR.png';
 
 const Card = ({
-  imageUrl, id, setFirstCardClicked, setSecondCardClicked, firstCardClicked, sideSelect,
+  imageUrl, id, setFirstCardClicked, setSecondCardClicked,
+  firstCardClicked, sideSelect, pairCount,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const cardSelectMap = {
@@ -26,6 +27,10 @@ const Card = ({
       }
     }
   }
+  React.useEffect(() => {
+    setIsVisible(false);
+  }, [pairCount]);
+
   return (
     <div
       className="card-container"
@@ -49,6 +54,8 @@ Card.propTypes = {
   setSecondCardClicked: PropTypes.func.isRequired,
   firstCardClicked: PropTypes.string,
   sideSelect: PropTypes.number.isRequired,
+  pairCount: PropTypes.number.isRequired,
+
 };
 Card.defaultProps = {
   firstCardClicked: undefined,

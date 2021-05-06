@@ -105,3 +105,29 @@
     font-size: 1em;
     text-align: center;
 }
+
+.btn-roman-clicked {
+    font-family: 'Cinzel', serif;
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: .5em 2em .5em .9em;
+    font-size: 1em;
+    text-align: center;
+    grid-row: 1 / 2;
+    background-color: rgb(104, 4, 4);
+}
+
+.btn-egypt-clicked {
+    font-family: 'Cinzel', serif;
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: .5em 2em .5em .9em;
+    font-size: 1em;
+    text-align: center;
+    grid-row: 1 / 2;
+    background-color: rgb(23, 21, 114);
+}
