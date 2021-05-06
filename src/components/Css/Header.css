@@ -92,7 +92,9 @@ opacity: 0.3;
 
 @media (max-width: 750px) {
     body {
-        background-color:whitesmoke;
+        background-image: url(../assets/backgroundMobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .Baniere {
       display: none;
