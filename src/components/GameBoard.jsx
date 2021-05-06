@@ -24,7 +24,6 @@ function GameBoard({
           <button className="button" type="button" onClick={() => { setGameBoard(false); }}>Accueil</button>
           <button className="button" type="button" onClick={nexttLevel}>Niveau Suivant</button>
         </div>
-        <Easymode null />
       </>
     );
   }

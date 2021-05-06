@@ -94,9 +94,6 @@ opacity: 0.3;
     body {
         background-color:whitesmoke;
     }
-    .header{
-       /* max-height: 150px; */
-    }
     .Baniere {
       display: none;
     }

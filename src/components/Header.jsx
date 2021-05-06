@@ -6,27 +6,17 @@ import BaniereDefault from './assets/Baniere.png';
 import BaniereRomain from './assets/BaniereRomain.png';
 import BaniereEgypte from './assets/BaniereEgypte.png';
 
-function Header({ logo, sideSelect, setGameBoard }) {
+function Header({ logo, sideSelect }) {
   const baniereSelectMap = {
     1: BaniereRomain,
     2: BaniereEgypte,
   };
-
-  function homeButton() {
-    setGameBoard(false);
-  }
-
   return (
     <div className="header">
-      <div 
-        className="bannerFlex"
-        role="button"
-        tabIndex="-1"
-        onKeyDown={homeButton}
-        onClick={homeButton}
-      >
-        <img className="logo" src={logo} alt="Age of Memory " />
-       </div>
+      <img className="Baniere" src={baniereSelectMap[sideSelect] ?? BaniereDefault} alt="" />
+      <div className="bannerFlex">
+        <img className="logo" src={logo} alt="Age of Memory" />
+      </div>
       <div className="rulesButton">
         <div className="modal">
           <ModalRules>
@@ -74,7 +64,6 @@ function Header({ logo, sideSelect, setGameBoard }) {
 Header.propTypes = {
   logo: PropTypes.string.isRequired,
   sideSelect: PropTypes.number.isRequired,
-  setGameBoard: PropTypes.func.isRequired,
 };
 
 export default Header;
