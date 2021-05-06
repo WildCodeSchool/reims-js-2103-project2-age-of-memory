@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import GameBoard from './GameBoard';
 import './Css/Home.css';
 
-// const addrtype = ['Facile', 'Moyen', 'Difficile', 'Hardcore'];
-
-function Home({ sideSelect, setSideSelect }) {
+function Home({
+  sideSelect, setSideSelect, gameBoard, setGameBoard,
+}) {
   const sideSelectMap = {
     1: 'Roman%20Empire',
     2: 'Egypt',
@@ -29,8 +29,6 @@ function Home({ sideSelect, setSideSelect }) {
   function onChangePairCount(e) {
     setPairCount(parseInt(e.target.value, 10));
   }
-  // const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]));
-  const [gameBoard, setGameBoard] = React.useState(false);
 
   function handleChangeBoolean() {
     if (sideSelect != null) {
@@ -75,16 +73,6 @@ function Home({ sideSelect, setSideSelect }) {
             <option value={9}>Difficile</option>
             <option value={12}>Hardcore</option>
           </select>
-          {/* <select
-            onChange={(e) => handleAddrTypeChange(e)}
-            className="browser-default custom-select"
-          >
-            {
-        addrtype.map((address, key) => <option value={key}>{address}</option>)
-      }
-            {' '}
-
-    </select> */}
 
         </div>
         <div className="play-container">
@@ -97,5 +85,7 @@ function Home({ sideSelect, setSideSelect }) {
 Home.propTypes = {
   setSideSelect: PropTypes.func.isRequired,
   sideSelect: PropTypes.number.isRequired,
+  gameBoard: PropTypes.bool.isRequired,
+  setGameBoard: PropTypes.func.isRequired,
 };
 export default Home;

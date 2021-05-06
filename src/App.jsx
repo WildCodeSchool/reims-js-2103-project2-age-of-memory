@@ -6,13 +6,21 @@ import Header from './components/Header';
 
 function App() {
   const [sideSelect, setSideSelect] = React.useState();
+  const [gameBoard, setGameBoard] = React.useState(false);
 
   return (
     <>
-      <Header sideSelect={sideSelect} logo={logo} />
+      <Header
+        sideSelect={sideSelect}
+        logo={logo}
+        gameBoard={gameBoard}
+        setGameBoard={setGameBoard}
+      />
       <Home
         setSideSelect={setSideSelect}
         sideSelect={sideSelect}
+        gameBoard={gameBoard}
+        setGameBoard={setGameBoard}
       />
     </>
   );
