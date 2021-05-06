@@ -63,9 +63,6 @@
     text-align: center;
 }
 
-.side-camp{
-    margin-bottom: 100px;
-}
 
 .title-camp {
     display: flex;
@@ -105,18 +102,6 @@
     font-size: 1em;
     text-align: center;
 }
-
-
-@media (max-width: 960px) {
-    .side-select {
-        display: flex;
-        justify-content: center;
-    }
-    .side-select-btn {
-        display: inline-block;
-    }
-
-}
 .btn-roman-clicked {
     font-family: 'Cinzel', serif;
     border: 1px solid rgb(207, 210, 219);
@@ -143,3 +128,23 @@
     background-color: rgb(23, 21, 114);
 }
 
+
+@media (max-width: 960px) {
+    .side-select {
+        display: flex;
+        justify-content: center;
+    }
+    .side-select-btn {
+        display: inline-block;
+    }
+
+    .title-camp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Cinzel', serif;  
+        color: rgb(255, 255, 255);
+        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+
+}
