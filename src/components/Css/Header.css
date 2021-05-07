@@ -13,9 +13,9 @@
 
 .logo{
     position: relative;
-    bottom: 110vh;
-    height: 60vh;
-    width: 35vw;
+    bottom: 95vh;
+    height: 26vh;
+    width: 30vw;
     cursor: pointer;
 }
 
@@ -23,10 +23,14 @@
     opacity: 0.3;
 }
 
+.bannerFlex {
+    max-height: 1px;
+}
+
 
 .rulesButton{
     position: relative;
-    bottom: 150vh;
+    bottom: 89vh;
     left: 85vw;
     max-width: 60px;
 }
