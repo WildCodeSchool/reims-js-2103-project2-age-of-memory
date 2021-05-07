@@ -1,7 +1,7 @@
 import React from 'react';
 import './Css/EndPage.css';
 
-function OutroPage() {
+function EndPage() {
   return (
     <>
       <div className="end-text">
@@ -17,4 +17,4 @@ function OutroPage() {
   );
 }
 
-export default OutroPage;
+export default EndPage;

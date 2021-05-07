@@ -19,9 +19,8 @@ function GameBoard({
     } else {
       setEndPageIsDisplayed(true);
     }
-      setGameBoard(false);
-    }
   }
+
   function modalWin() {
     return (
       <>
