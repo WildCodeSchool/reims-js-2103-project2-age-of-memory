@@ -1,18 +1,65 @@
 .end-text {
-    width: 50vw;
-    margin: auto;
+  width: 50vw;
+  margin: auto;
 }
 
 .end-text h1 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  border: thick double;
+  border-width: 8px;
+  border-color: grey;
+  border-radius: 6%;
+  padding: 30px;
+  background-color: rgb(228, 212, 168);
+  color: #faeabb;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px,
+    #000000 1px -1px;
+}
+
+.names {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+  font-family: "Cinzel", serif;
+  color: black;
+}
+
+.names a {
+  margin: 1px;
+  text-decoration: none;
+  color: white;
+}
+
+.names h3 {
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+}
+
+@media (max-width: 750px) {
+  .end-text {
+    margin-right: 50vw;
+  }
+
+  .end-text h1 {
+    border-radius: 10%;
+    border: solid 0.35em #e1c264;
+    width: 315px;
+    padding: 25px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 3vh;
+    font-size: 1.5rem;
+  }
+
+  .names {
     text-align: center;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    border: thick double;
-    border-width: 8px;
-    border-color: grey;
-    border-radius: 6%;
-    padding: 30px;
-    background-color: rgb(228, 212, 168);
-    color: #faeabb;
-    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    font-size: 1.2rem;
+    font-family: "Cinzel", serif;
+    color: white;
+  }
 }
