@@ -21,7 +21,6 @@
 .names {
   text-align: center;
   font-size: 2rem;
-  margin-top: 50px;
   font-family: "Cinzel", serif;
   color: black;
 }
@@ -29,7 +28,10 @@
 .names a {
   margin: 1px;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  z-index: 999;
+  position: relative;
+  bottom: 50px;
 }
 
 .names h3 {
