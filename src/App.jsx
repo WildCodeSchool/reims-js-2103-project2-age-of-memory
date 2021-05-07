@@ -12,7 +12,7 @@ function App() {
   if (endPageIsDisplayed === true) {
     return (
       <>
-        <Header sideSelect={sideSelect} logo={logo} />
+        <Header sideSelect={sideSelect} logo={logo} setGameBoard={setGameBoard} />
         <EndPage />
       </>
     );
